@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "name": "Aryan",
+      "email": "aryan@gmail.com",
+      "password": "123456",
+      "id": "kqwN2-RJbNk"
+    }
+  ],
+  "products": [
+    {
+      "Product_Name": "Samsung S25 Ultra 5G AI",
+      "Product_Specification": "Samsung Galaxy S25 Ultra 5G AI Smartphone (Titanium Silverblue, 12GB RAM, 256GB Storage), 200MP Camera, S Pen Included, Long Battery Life",
+      "Price": "99999",
+      "image": "https://m.media-amazon.com/images/I/41O5ghmqGsL._SY300_SX300_QL70_FMwebp_.jpg",
+      "id": "1Z0fPGyV_Zs"
+    },
+    {
+      "Product_Name": "Samsung Galaxy S24",
+      "Product_Specification": "Samsung Galaxy S24 Snapdragon 5G (Onyx Black, 256 GB) (8 GB RAM)",
+      "Price": "54000",
+      "image": "https://m.media-amazon.com/images/I/21nGAfj+EmL.jpg",
+      "id": "98avzp7G9Uk"
+    },
+    {
+      "Product_Name": "Boat Rockerz Earphones",
+      "Product_Specification": "Boat Rockerz 255 Pro+, 60HRS Battery, Fast Charge, IPX7, Dual Pairing, Low Latency, Magnetic Earbuds, in Ear Bluetooth Neckband, Wireless with Mic Earphones (Active Black)",
+      "Price": "1300",
+      "image": "https://m.media-amazon.com/images/I/41NVmSPAgAL._SY300_SX300_QL70_FMwebp_.jpg",
+      "id": "fx0UQ1k6EaM"
+    },
+    {
+      "Product_Name": "Philips earbuds",
+      "Product_Specification": "Philips TAT1269 Bluetooth Truly Wireless in Ear Earbuds with mic, 13mm Drivers, Bluetooth 5.4, 40H Playtime, IPX5, Fast Charging, Touch Controls, Voice Assistant, Mono Mode, LED Indicator (Deep Black)",
+      "Price": "900",
+      "image": "https://m.media-amazon.com/images/I/61yj9oMhONL._AC_UY327_FMwebp_QL65_.jpg",
+      "id": "mGA4x_k0Z30"
+    },
+    {
+      "Product_Name": "iphone 17 ",
+      "Product_Specification": "Apple iPhone 16 Plus 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Ultrmarine",
+      "Price": "70000",
+      "image": "https://m.media-amazon.com/images/I/71D3JsltoLL._SX522_.jpg",
+      "id": "Y0XzNnTj8X0"
+    }
+  ],
+  "cart": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
