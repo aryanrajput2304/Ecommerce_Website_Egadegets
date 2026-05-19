@@ -82,11 +82,13 @@ export default function Hero() {
             >
               {/* PRODUCT IMAGE */}
               <div className="bg-[#1a1a1a] p-4 flex items-center justify-center">
-                <img
-                  src={item.imageUrl}
-                  alt={item.name}
-                  className="w-full h-52 sm:h-60 md:h-64 object-contain"
-                />
+                <Link to={`/products/${item._id}`}>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className="w-full h-52 sm:h-60 md:h-64 object-contain"
+                  />
+                </Link>
               </div>
 
               {/* PRODUCT DETAILS */}

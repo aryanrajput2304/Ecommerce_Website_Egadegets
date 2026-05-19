@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import { FiShoppingCart, FiStar } from "react-icons/fi";
+import { ImTerminal } from "react-icons/im";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
