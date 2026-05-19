@@ -24,7 +24,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "https://dummy-backend1.onrender.com/api/v1/user/register",
+        "https://ecommerce-backend1-3.onrender.com/api/v1/user/register",
         formData,
       );
 

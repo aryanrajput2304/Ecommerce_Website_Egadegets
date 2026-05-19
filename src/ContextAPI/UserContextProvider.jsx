@@ -35,7 +35,7 @@ export default function UserContextProvider({ children }) {
 
     try {
       const response = await axios.post(
-        "https://dummy-backend1.onrender.com/api/v1/user/login",
+        "https://ecommerce-backend1-3.onrender.com/api/v1/user/login",
         {
           email,
           password,
