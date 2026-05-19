@@ -5,7 +5,7 @@ import { FiSearch, FiMenu } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import useCart from "../hooks/useCart";
 import { MdOutlineLogout } from "react-icons/md";
-import Responsive from "./Responsive";
+import Responsive from "./responsive";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ export default function Navbar() {
   };
 
   return (
-    <>
+    <div>
       <nav className="fixed top-0 left-0 w-full bg-[#0b0b0b] py-4 px-4 md:px-8 flex items-center justify-between border-b border-[#1f1f1f] shadow-[0_4px_30px_rgba(0,0,0,0.6)] z-50 backdrop-blur-lg">
         {/* LEFT SECTION */}
         <div className="flex items-center gap-4">
@@ -133,6 +133,6 @@ export default function Navbar() {
 
       {/* MOBILE SIDEBAR */}
       <Responsive menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={user} />
-    </>
+    </div>
   );
 }

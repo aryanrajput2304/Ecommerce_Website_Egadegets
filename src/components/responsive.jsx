@@ -12,7 +12,7 @@ import {
 
 export default function Responsive({ menuOpen, setMenuOpen, user }) {
   return (
-    <>
+    <div>
       {/* Overlay */}
       <div
         onClick={() => setMenuOpen(false)}
@@ -116,6 +116,6 @@ export default function Responsive({ menuOpen, setMenuOpen, user }) {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
