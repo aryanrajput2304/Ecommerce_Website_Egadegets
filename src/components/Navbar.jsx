@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 import { BsCart3 } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
 import { FiSearch, FiMenu } from "react-icons/fi";
@@ -14,12 +16,38 @@ export default function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // SEARCH STATE
+  const [search, setSearch] = useState("");
+
+  // ALL PRODUCTS
+  const [products, setProducts] = useState([]);
+
+  // FILTERED PRODUCTS
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
   // CART
   const { cart, fetchCart } = useCart();
 
   // FETCH CART
   useEffect(() => {
     fetchCart();
+  }, []);
+
+  // FETCH PRODUCTS FOR SEARCH
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(
+          "https://ecommerce-backend1-3.onrender.com/api/v1/products",
+        );
+
+        setProducts(response.data.products);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchProducts();
   }, []);
 
   // LOGOUT
@@ -29,6 +57,38 @@ export default function Navbar() {
     alert("Logout Successfully");
 
     navigate("/login");
+  };
+
+  // HANDLE SEARCH INPUT
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+
+    setSearch(value);
+
+    // EMPTY SEARCH
+    if (value.trim() === "") {
+      setFilteredProducts([]);
+      return;
+    }
+
+    // FILTER PRODUCTS
+    const filtered = products.filter((item) =>
+      item.name.toLowerCase().includes(value.toLowerCase()),
+    );
+
+    setFilteredProducts(filtered);
+  };
+
+  // HANDLE SEARCH SUBMIT
+  const handleSearch = (e) => {
+    e.preventDefault();
+
+    if (!search.trim()) return;
+
+    navigate(`/product?search=${search}`);
+
+    // HIDE SUGGESTIONS
+    setFilteredProducts([]);
   };
 
   return (
@@ -87,14 +147,58 @@ export default function Navbar() {
         </ul>
 
         {/* SEARCH */}
-        <div className="hidden lg:flex items-center bg-white rounded-lg px-3 py-1 w-[300px] mx-6">
-          <FiSearch className="text-gray-500 text-lg" />
+        <div className="hidden lg:block relative w-[320px] mx-6">
+          <form
+            onSubmit={handleSearch}
+            className="flex items-center bg-white rounded-xl px-3 py-2"
+          >
+            <FiSearch className="text-gray-500 text-lg" />
 
-          <input
-            type="text"
-            placeholder="Search products"
-            className="outline-none px-2 py-1 w-full text-black"
-          />
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={search}
+              onChange={handleSearchChange}
+              className="outline-none px-3 w-full text-black"
+            />
+
+            <button type="submit">
+              <FiSearch className="text-black text-lg hover:text-cyan-500 duration-300" />
+            </button>
+          </form>
+
+          {/* SEARCH SUGGESTIONS */}
+          {filteredProducts.length > 0 && (
+            <div className="absolute top-14 left-0 w-full bg-white rounded-2xl overflow-hidden shadow-2xl border border-gray-200 z-50">
+              {filteredProducts.slice(0, 5).map((item) => (
+                <div
+                  key={item._id}
+                  onClick={() => {
+                    navigate(`/product?search=${item.name}`);
+
+                    setSearch(item.name);
+
+                    setFilteredProducts([]);
+                  }}
+                  className="flex items-center gap-4 px-4 py-3 hover:bg-cyan-50 cursor-pointer border-b border-gray-100 transition"
+                >
+                  {/* PRODUCT IMAGE */}
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className="w-12 h-12 object-contain"
+                  />
+
+                  {/* PRODUCT INFO */}
+                  <div>
+                    <h1 className="text-black font-semibold line-clamp-1">
+                      {item.name}
+                    </h1>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* RIGHT SECTION */}
