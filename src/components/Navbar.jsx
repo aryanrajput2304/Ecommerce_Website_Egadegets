@@ -103,7 +103,7 @@ export default function Navbar() {
 
           {/* LOGO */}
           <h1 className="text-2xl md:text-4xl font-extrabold text-cyan-400">
-            Shopify
+            GADGET GALAXY
           </h1>
         </div>
 

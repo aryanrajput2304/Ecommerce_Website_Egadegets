@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-black  text-white">
       <div className="max-w-7xl mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <h1 className="text-2xl font-extrabold">SHOPIFY</h1>
+          <h1 className="text-2xl font-extrabold">GADGET GALAXY</h1>
           <p className="mt-3 text-white text-sm">
             Your one-stop shop for all your needs. Quality products at the best
             price.
@@ -56,7 +56,7 @@ export default function Footer() {
 
         <div>
           <h2 className="text-lg font-semibold mb-3">Contact</h2>
-          <p className="text-white text-sm">Email: support@shopify.com</p>
+          <p className="text-white text-sm">Email: support@gadgetgalaxy.com</p>
           <p className="text-white text-sm">Phone: +91 9579621911</p>
           <p className="text-white text-sm">Location: India</p>
         </div>

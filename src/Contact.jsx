@@ -29,7 +29,7 @@ export default function Contact() {
 
               <div>
                 <p className="text-lg font-semibold">Email</p>
-                <p className="text-gray-400">support@shopify.com</p>
+                <p className="text-gray-400">support@gadgetgalaxy.com</p>
               </div>
             </div>
 

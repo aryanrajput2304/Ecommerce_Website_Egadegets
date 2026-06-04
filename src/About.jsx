@@ -23,9 +23,9 @@ export default function About() {
           <h2 className="text-4xl font-bold text-cyan-400 mb-8">Who We Are</h2>
 
           <p className="text-gray-400 text-lg leading-8 mb-6">
-            Shopify is your trusted ecommerce platform where you can discover
-            high-quality gadgets, smartphones, accessories, and premium tech
-            products at the best prices.
+            Gadget Galaxy is your trusted ecommerce platform where you can
+            discover high-quality gadgets, smartphones, accessories, and premium
+            tech products at the best prices.
           </p>
 
           <p className="text-gray-400 text-lg leading-8">
