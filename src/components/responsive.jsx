@@ -30,7 +30,9 @@ export default function Responsive({ menuOpen, setMenuOpen, user }) {
         {/* Header */}
         <div className="flex items-center justify-between p-5 border-b border-gray-700">
           <div>
-            <h2 className="text-3xl font-extrabold text-cyan-400">Shopify</h2>
+            <h2 className="text-3xl font-extrabold text-cyan-400">
+              GADGET GALAXY
+            </h2>
 
             <p className="text-gray-400 text-sm mt-1">
               Premium Ecommerce Store
@@ -110,9 +112,9 @@ export default function Responsive({ menuOpen, setMenuOpen, user }) {
         {/* Bottom Description */}
         <div className="absolute bottom-0 left-0 w-full p-5 border-t border-gray-800">
           <p className="text-gray-400 text-sm leading-6">
-            Shopify is your trusted ecommerce destination for premium fashion,
-            electronics, and lifestyle products with fast delivery and secure
-            shopping.
+            Gadget Galaxy is your trusted ecommerce destination for premium
+            fashion, electronics, and lifestyle products with fast delivery and
+            secure shopping.
           </p>
         </div>
       </div>
